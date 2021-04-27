@@ -1,0 +1,31 @@
+{
+  "name": "markdown-tools",
+  "displayName": "Markdown Tools",
+  "description": "Supporting editing the Markdown file.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:markdown-tools.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-tools.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.55.0",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
