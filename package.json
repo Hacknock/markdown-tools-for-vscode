@@ -2,7 +2,10 @@
   "name": "markdown-tools",
   "displayName": "Markdown Tools",
   "description": "Supporting editing the Markdown file.",
+  "publisher": "Hacknock",
   "version": "0.0.1",
+  "license": "Apache",
+  "repository": "https://github.com/Hacknock/markdown-tools-for-vscode",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -10,14 +13,22 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:markdown-tools.helloWorld"
+    "onLanguage:markdown",
+    "onCommand:markdown-tools.greeting"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "markdown-tools.helloWorld",
-        "title": "Hello World"
+        "command": "markdown-tools.greeting",
+        "title": "Greeting"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "markdown-tools.onEnterKey",
+        "key": "ctrl+enter",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown"
       }
     ]
   },
